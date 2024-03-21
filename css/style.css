@@ -4,6 +4,9 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color: rgb(29, 29, 29);
+}
 #displayTwo{
 
     border: 3px solid black;
@@ -24,8 +27,10 @@ input{
 }
 
 .container{
+    background-color: white;
     border: 2px solid red;
-    height: 500px;
+    height: 100vh;
+    overflow-y: auto;
 }
 
 

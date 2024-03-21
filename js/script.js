@@ -19,12 +19,12 @@ Prima la logica in italiano e poi traduciamo in codice.
 E ricordiamoci che console.log() è nostro amico!
 Buon lavoro! :muscolo:
 DATI PER ESERCIZIO
- 		        
-       	                
-		        
-	        	
-	      	            
-		         
+                    
+                              
+                
+            	
+                            
+                 
 */
 
 let teaMembers = [
@@ -32,47 +32,55 @@ let teaMembers = [
         name: 'Wayne',
         surname: 'Barnett',
         role: 'Founder & CEO',
-        image:`<img src="/img/wayne-barnett-founder-ceo.jpg" alt="Wayne Barnett">`
+        image: `<img src="/img/wayne-barnett-founder-ceo.jpg" alt="Wayne Barnett">`
 
     },
     {
         name: 'Angela',
         surname: 'Caroll',
         role: 'Chief Editor',
-        image:`<img src="/img/angela-caroll-chief-editor.jpg" alt="Angela Caroll">`
+        image: `<img src="/img/angela-caroll-chief-editor.jpg" alt="Angela Caroll">`
 
     },
     {
         name: 'Walter',
         surname: ' Gordon',
         role: 'Office Manager',
-        image:`<img src="/img/walter-gordon-office-manager.jpg" alt="Walter Gordon">`
+        image: `<img src="/img/walter-gordon-office-manager.jpg" alt="Walter Gordon">`
 
     },
     {
         name: 'Angela',
         surname: ' Lopez',
         role: 'Social Media Manager',
-        image:`<img src="/img/angela-lopez-social-media-manager.jpg" alt="Angela Lopez">`
+        image: `<img src="/img/angela-lopez-social-media-manager.jpg" alt="Angela Lopez">`
 
     },
     {
         name: 'Scott',
         surname: 'Estrada',
         role: 'Developer',
-        image:`<img src="/img/scott-estrada-developer.jpg" alt="Scott Estrada">`
+        image: `<img src="/img/scott-estrada-developer.jpg" alt="Scott Estrada">`
 
     },
     {
         name: 'Barbara',
         surname: 'Ramos',
         role: 'Graphic Designer',
-        image:`<img src="/img/barbara-ramos-graphic-designer.jpg" alt="Barbara Ramos">`
+        image: `<img src="/img/barbara-ramos-graphic-designer.jpg" alt="Barbara Ramos">`
 
     },
 ];
 
-console.log(teaMembers);
+for (let i = 0; i < teaMembers.length; i++) {
+    console.log(`
+    name: ${teaMembers[i].name}
+    surname: ${teaMembers[i].surname} 
+    role: ${teaMembers[i].role} 
+    image: ${teaMembers[i].image}
+    `);
+}
+
 
 
 
