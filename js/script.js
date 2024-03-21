@@ -60,6 +60,7 @@ let teaMembers = [
 
 
 const ulEl = document.getElementById('cards');
+const send = document.querySelector('.btn');
 
 
 for (let i = 0; i < teaMembers.length; i++) {
@@ -82,6 +83,20 @@ for (let i = 0; i < teaMembers.length; i++) {
     ulEl.appendChild(divEl)
 
 };
+
+send.addEventListener('click', function () {
+    const inputs = document.querySelectorAll('input');
+
+
+    for (let i = 0; i < inputs.length; i++) {
+        const nam = (inputs[i].value);
+        if (isNaN(nam)) {
+            teaMembers.push(nam);
+        }
+    }
+    console.log(teaMembers)
+});
+
 
 
 
