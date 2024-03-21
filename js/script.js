@@ -1,8 +1,7 @@
 /*
 
 
-BONUS 2:
-Organizzare i singoli membri in card/schede
+
 BONUS 3:
 Permettere l'aggiunta di un nuovo membro del team
 Consigli del giorno:
@@ -60,7 +59,7 @@ let teaMembers = [
 ];
 
 
-const ulEl = document.querySelector('ul');
+const ulEl = document.getElementById('cards');
 
 
 for (let i = 0; i < teaMembers.length; i++) {
@@ -70,18 +69,17 @@ for (let i = 0; i < teaMembers.length; i++) {
     role: ${teaMembers[i].role} 
     image: ${teaMembers[i].image}
     `);
-    const liEl = document.createElement('li');
-    liEl.classList.add('list-group-item', 'col-4', 'card', 'box');
+    const divEl = document.createElement('div');
+    divEl.classList.add( 'card', 'box');
 
-
-    liEl.innerHTML = `
+    divEl.innerHTML = `
     ${teaMembers[i].image}
- ${teaMembers[i].name}
- ${teaMembers[i].surname} 
- ${teaMembers[i].role} 
+ <h3 class="text-center mt-3">${teaMembers[i].name} ${teaMembers[i].surname}</h3>
+ 
+ <p class="text-center">${teaMembers[i].role}</p>
 
 `;
-    ulEl.appendChild(liEl)
+    ulEl.appendChild(divEl)
 
 };
 
