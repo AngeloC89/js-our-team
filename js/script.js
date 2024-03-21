@@ -19,42 +19,42 @@ let teaMembers = [
         name: 'Wayne',
         surname: 'Barnett',
         role: 'Founder & CEO',
-        image: `<img src="/img/wayne-barnett-founder-ceo.jpg" alt="Wayne Barnett">`
+        image: `<img class="img-fluid" src="/img/wayne-barnett-founder-ceo.jpg" alt="Wayne Barnett">`
 
     },
     {
         name: 'Angela',
         surname: 'Caroll',
         role: 'Chief Editor',
-        image: `<img src="/img/angela-caroll-chief-editor.jpg" alt="Angela Caroll">`
+        image: `<img class="img-fluid" src="/img/angela-caroll-chief-editor.jpg" alt="Angela Caroll">`
 
     },
     {
         name: 'Walter',
         surname: ' Gordon',
         role: 'Office Manager',
-        image: `<img src="/img/walter-gordon-office-manager.jpg" alt="Walter Gordon">`
+        image: `<img class="img-fluid" src="/img/walter-gordon-office-manager.jpg" alt="Walter Gordon">`
 
     },
     {
         name: 'Angela',
         surname: ' Lopez',
         role: 'Social Media Manager',
-        image: `<img src="/img/angela-lopez-social-media-manager.jpg" alt="Angela Lopez">`
+        image: `<img class="img-fluid" src="/img/angela-lopez-social-media-manager.jpg" alt="Angela Lopez">`
 
     },
     {
         name: 'Scott',
         surname: 'Estrada',
         role: 'Developer',
-        image: `<img src="/img/scott-estrada-developer.jpg" alt="Scott Estrada">`
+        image: `<img class="img-fluid" src="/img/scott-estrada-developer.jpg" alt="Scott Estrada">`
 
     },
     {
         name: 'Barbara',
         surname: 'Ramos',
         role: 'Graphic Designer',
-        image: `<img src="/img/barbara-ramos-graphic-designer.jpg" alt="Barbara Ramos">`
+        image: `<img class="img-fluid" src="/img/barbara-ramos-graphic-designer.jpg" alt="Barbara Ramos">`
 
     },
 ];
@@ -71,18 +71,20 @@ for (let i = 0; i < teaMembers.length; i++) {
     image: ${teaMembers[i].image}
     `);
     const liEl = document.createElement('li');
-    liEl.classList.add('list-group-item');
+    liEl.classList.add('list-group-item', 'col-4', 'card', 'box');
 
 
     liEl.innerHTML = `
-name: ${teaMembers[i].name}
-surname: ${teaMembers[i].surname} 
-role: ${teaMembers[i].role} 
-image: ${teaMembers[i].image}
+    ${teaMembers[i].image}
+ ${teaMembers[i].name}
+ ${teaMembers[i].surname} 
+ ${teaMembers[i].role} 
+
 `;
     ulEl.appendChild(liEl)
 
 };
+
 
 
 
