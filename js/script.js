@@ -1,8 +1,6 @@
 /*
-MILESTONE 2:
-Stampare le stesse informazioni su DOM sottoforma di stringhe
-BONUS 1:
-Trasformare la stringa foto in una immagine effettiva
+
+
 BONUS 2:
 Organizzare i singoli membri in card/schede
 BONUS 3:
@@ -15,46 +13,48 @@ Buon lavoro! :muscolo:
 DATI PER ESERCIZIO          
 */
 
+
 let teaMembers = [
     {
         name: 'Wayne',
         surname: 'Barnett',
         role: 'Founder & CEO',
-        image: 'wayne-barnett-founder-ceo.jpg'
+        image: `<img src="/img/wayne-barnett-founder-ceo.jpg" alt="Wayne Barnett">`
+
     },
     {
         name: 'Angela',
         surname: 'Caroll',
         role: 'Chief Editor',
-        image: 'angela-caroll-chief-editor.jpg'
+        image: `<img src="/img/angela-caroll-chief-editor.jpg" alt="Angela Caroll">`
 
     },
     {
         name: 'Walter',
         surname: ' Gordon',
         role: 'Office Manager',
-        image: 'walter-gordon-office-manager.jpg'
+        image: `<img src="/img/walter-gordon-office-manager.jpg" alt="Walter Gordon">`
 
     },
     {
         name: 'Angela',
         surname: ' Lopez',
         role: 'Social Media Manager',
-        image: 'angela-lopez-social-media-manager.jpg'
+        image: `<img src="/img/angela-lopez-social-media-manager.jpg" alt="Angela Lopez">`
 
     },
     {
         name: 'Scott',
         surname: 'Estrada',
         role: 'Developer',
-        image: 'scott-estrada-developer.jpg'
+        image: `<img src="/img/scott-estrada-developer.jpg" alt="Scott Estrada">`
 
     },
     {
         name: 'Barbara',
         surname: 'Ramos',
         role: 'Graphic Designer',
-        image: 'barbara-ramos-graphic-designer.jpg'
+        image: `<img src="/img/barbara-ramos-graphic-designer.jpg" alt="Barbara Ramos">`
 
     },
 ];
