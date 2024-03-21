@@ -12,6 +12,8 @@ Buon lavoro! :muscolo:
 DATI PER ESERCIZIO          
 */
 
+const send = document.querySelector('.btn');//button send
+const ulEl = document.getElementById('cards');//questo div contiene le cards con i singoli membri.
 
 let teaMembers = [
     {
@@ -56,36 +58,39 @@ let teaMembers = [
         image: `<img class="img-fluid" src="/img/barbara-ramos-graphic-designer.jpg" alt="Barbara Ramos">`
 
     },
-];
+];//array iniziale con dentro oggetti
 
-
-const ulEl = document.getElementById('cards');
-const send = document.querySelector('.btn');
-
-
-for (let i = 0; i < teaMembers.length; i++) {
-    console.log(`
-    name: ${teaMembers[i].name}
-    surname: ${teaMembers[i].surname} 
-    role: ${teaMembers[i].role} 
-    image: ${teaMembers[i].image}
-    `);
-    const divEl = document.createElement('div');
-    divEl.classList.add('card', 'box', 'text-center');
-
-    divEl.innerHTML = `
-    ${teaMembers[i].image}
- <h3 class="text-center my-2">${teaMembers[i].name} ${teaMembers[i].surname} </h3>
- 
- <p class="text-center my-2">${teaMembers[i].role}</p>
-
-`;
-    ulEl.appendChild(divEl)
-
-};
-
+//bottone send che carica i dati dal form.
 send.addEventListener('click', function () {
-    const inputs = document.querySelectorAll('input');
+    ulEl.innerHTML = '';
+    const newMembers = newObject('input', teaMembers);
+
+makeCard(newMembers)
+
+});
+
+makeCard(teaMembers)
+
+function makeCard(array) {
+   
+    for (let i = 0; i < array.length; i++) {
+        
+        const divEl = document.createElement('div');
+        divEl.classList.add('card', 'box', 'text-center');
+
+        divEl.innerHTML = `
+        ${array[i].image}
+     <h3 class="text-center my-2">${array[i].name} ${array[i].surname} </h3>
+     
+     <p class="text-center my-2">${array[i].role}</p>
+    
+    `;
+        ulEl.appendChild(divEl)
+
+    };
+}
+function newObject(input, array) {
+    const inputs = document.querySelectorAll(`${input}`);
     const objectNew = {
 
     };
@@ -96,12 +101,11 @@ send.addEventListener('click', function () {
             objectNew[input.name] = input.value;
         }
     }
-    console.log(objectNew)
+    array.push(objectNew);
+    return array;
 
-    teaMembers.push(objectNew);
-    console.log(teaMembers)
-},
-);
+}
+
 
 
 
