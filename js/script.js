@@ -1,10 +1,4 @@
 /*
-Utilizzando i dati forniti, creare un array di oggetti per rappresentare i membri del team.
-Ogni membro è caratterizzato dalle seguenti informazioni: nome, ruolo e foto.
-MILESTONE 0:
-Creare l’array di oggetti con le informazioni fornite.
-MILESTONE 1:
-Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
 MILESTONE 2:
 Stampare le stesse informazioni su DOM sottoforma di stringhe
 BONUS 1:
@@ -18,13 +12,7 @@ Ragioniamo come sempre a step.
 Prima la logica in italiano e poi traduciamo in codice.
 E ricordiamoci che console.log() è nostro amico!
 Buon lavoro! :muscolo:
-DATI PER ESERCIZIO
-                    
-                              
-                
-            	
-                            
-                 
+DATI PER ESERCIZIO          
 */
 
 let teaMembers = [
@@ -32,45 +20,48 @@ let teaMembers = [
         name: 'Wayne',
         surname: 'Barnett',
         role: 'Founder & CEO',
-        image: `<img src="/img/wayne-barnett-founder-ceo.jpg" alt="Wayne Barnett">`
-
+        image: 'wayne-barnett-founder-ceo.jpg'
     },
     {
         name: 'Angela',
         surname: 'Caroll',
         role: 'Chief Editor',
-        image: `<img src="/img/angela-caroll-chief-editor.jpg" alt="Angela Caroll">`
+        image: 'angela-caroll-chief-editor.jpg'
 
     },
     {
         name: 'Walter',
         surname: ' Gordon',
         role: 'Office Manager',
-        image: `<img src="/img/walter-gordon-office-manager.jpg" alt="Walter Gordon">`
+        image: 'walter-gordon-office-manager.jpg'
 
     },
     {
         name: 'Angela',
         surname: ' Lopez',
         role: 'Social Media Manager',
-        image: `<img src="/img/angela-lopez-social-media-manager.jpg" alt="Angela Lopez">`
+        image: 'angela-lopez-social-media-manager.jpg'
 
     },
     {
         name: 'Scott',
         surname: 'Estrada',
         role: 'Developer',
-        image: `<img src="/img/scott-estrada-developer.jpg" alt="Scott Estrada">`
+        image: 'scott-estrada-developer.jpg'
 
     },
     {
         name: 'Barbara',
         surname: 'Ramos',
         role: 'Graphic Designer',
-        image: `<img src="/img/barbara-ramos-graphic-designer.jpg" alt="Barbara Ramos">`
+        image: 'barbara-ramos-graphic-designer.jpg'
 
     },
 ];
+
+
+const ulEl = document.querySelector('ul');
+
 
 for (let i = 0; i < teaMembers.length; i++) {
     console.log(`
@@ -79,7 +70,21 @@ for (let i = 0; i < teaMembers.length; i++) {
     role: ${teaMembers[i].role} 
     image: ${teaMembers[i].image}
     `);
-}
+    const liEl = document.createElement('li');
+    liEl.classList.add('list-group-item');
+
+
+    liEl.innerHTML = `
+name: ${teaMembers[i].name}
+surname: ${teaMembers[i].surname} 
+role: ${teaMembers[i].role} 
+image: ${teaMembers[i].image}
+`;
+    ulEl.appendChild(liEl)
+
+};
+
+
 
 
 
