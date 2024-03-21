@@ -86,16 +86,22 @@ for (let i = 0; i < teaMembers.length; i++) {
 
 send.addEventListener('click', function () {
     const inputs = document.querySelectorAll('input');
+    const objectNew = {
 
+    };
 
     for (let i = 0; i < inputs.length; i++) {
-        const nam = (inputs[i].value);
-        if (isNaN(nam)) {
-            teaMembers.push(nam);
+        const input = inputs[i];
+        if (input.name) {
+            objectNew[input.name] = input.value;
         }
     }
+    console.log(objectNew)
+
+    teaMembers.push(objectNew);
     console.log(teaMembers)
-});
+},
+);
 
 
 
