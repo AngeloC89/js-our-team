@@ -14,6 +14,7 @@ DATI PER ESERCIZIO
 
 const send = document.querySelector('.btn');//button send
 const ulEl = document.getElementById('cards');//questo div contiene le cards con i singoli membri.
+const newMemb = document.querySelectorAll('input');
 
 let teaMembers = [
     {
@@ -63,14 +64,18 @@ let teaMembers = [
 //bottone send che carica i dati dal form.
 send.addEventListener('click', function () {
     ulEl.innerHTML = '';
-    const newMembers = newObject('input', teaMembers);
+    const newMembers = newObject(newMemb, teaMembers);
 
 makeCard(newMembers)
+console.log(newMembers)
 
 });
 
 makeCard(teaMembers)
 
+
+
+// **************** funzioni ****************//
 function makeCard(array) {
    
     for (let i = 0; i < array.length; i++) {
@@ -89,8 +94,8 @@ function makeCard(array) {
 
     };
 }
-function newObject(input, array) {
-    const inputs = document.querySelectorAll(`${input}`);
+function newObject(inputs, array) {
+    
     const objectNew = {
 
     };
