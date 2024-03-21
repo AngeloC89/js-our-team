@@ -21,42 +21,42 @@ let teaMembers = [
         name: 'Wayne',
         surname: 'Barnett',
         role: 'Founder & CEO',
-        image: `<img class="img-fluid" src="/img/wayne-barnett-founder-ceo.jpg" alt="Wayne Barnett">`
+        image: `wayne-barnett-founder-ceo.jpg`
 
     },
     {
         name: 'Angela',
         surname: 'Caroll',
         role: 'Chief Editor',
-        image: `<img class="img-fluid" src="/img/angela-caroll-chief-editor.jpg" alt="Angela Caroll">`
+        image: `angela-caroll-chief-editor.jpg`
 
     },
     {
         name: 'Walter',
         surname: ' Gordon',
         role: 'Office Manager',
-        image: `<img class="img-fluid" src="/img/walter-gordon-office-manager.jpg" alt="Walter Gordon">`
+        image: `walter-gordon-office-manager.jpg`
 
     },
     {
         name: 'Angela',
         surname: ' Lopez',
         role: 'Social Media Manager',
-        image: `<img class="img-fluid" src="/img/angela-lopez-social-media-manager.jpg" alt="Angela Lopez">`
+        image: `angela-lopez-social-media-manager.jpg`
 
     },
     {
         name: 'Scott',
         surname: 'Estrada',
         role: 'Developer',
-        image: `<img class="img-fluid" src="/img/scott-estrada-developer.jpg" alt="Scott Estrada">`
+        image: `scott-estrada-developer.jpg`
 
     },
     {
         name: 'Barbara',
         surname: 'Ramos',
         role: 'Graphic Designer',
-        image: `<img class="img-fluid" src="/img/barbara-ramos-graphic-designer.jpg" alt="Barbara Ramos">`
+        image: `barbara-ramos-graphic-designer.jpg`
 
     },
 ];//array iniziale con dentro oggetti
@@ -84,7 +84,7 @@ function makeCard(array) {
         divEl.classList.add('card', 'box', 'text-center');
 
         divEl.innerHTML = `
-        ${array[i].image}
+       <img class="img-fluid" src="/img/${array[i].image}" alt="Wayne Barnett">
      <h3 class="text-center my-2">${array[i].name} ${array[i].surname} </h3>
      
      <p class="text-center my-2">${array[i].role}</p>
