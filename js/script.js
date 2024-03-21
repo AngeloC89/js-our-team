@@ -70,13 +70,13 @@ for (let i = 0; i < teaMembers.length; i++) {
     image: ${teaMembers[i].image}
     `);
     const divEl = document.createElement('div');
-    divEl.classList.add( 'card', 'box');
+    divEl.classList.add('card', 'box', 'text-center');
 
     divEl.innerHTML = `
     ${teaMembers[i].image}
- <h3 class="text-center mt-3">${teaMembers[i].name} ${teaMembers[i].surname}</h3>
+ <h3 class="text-center my-2">${teaMembers[i].name} ${teaMembers[i].surname} </h3>
  
- <p class="text-center">${teaMembers[i].role}</p>
+ <p class="text-center my-2">${teaMembers[i].role}</p>
 
 `;
     ulEl.appendChild(divEl)
