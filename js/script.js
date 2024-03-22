@@ -1,16 +1,3 @@
-/*
-
-
-
-BONUS 3:
-Permettere l'aggiunta di un nuovo membro del team
-Consigli del giorno:
-Ragioniamo come sempre a step.
-Prima la logica in italiano e poi traduciamo in codice.
-E ricordiamoci che console.log() è nostro amico!
-Buon lavoro! :muscolo:
-DATI PER ESERCIZIO          
-*/
 
 const send = document.querySelector('.btn');//button send
 const ulEl = document.getElementById('cards');//questo div contiene le cards con i singoli membri.
@@ -81,10 +68,10 @@ function makeCard(array) {
     for (let i = 0; i < array.length; i++) {
         
         const divEl = document.createElement('div');
-        divEl.classList.add('card', 'box', 'text-center');
+        divEl.classList.add('card', 'box', 'text-center', 'col-12', 'col-lg-3');
 
         divEl.innerHTML = `
-       <img class="img-fluid" src="/img/${array[i].image}" alt="Wayne Barnett">
+       <img class="img-fluid" src="/img/${array[i].image}" alt="photo ${array[i].name} ${array[i].surname}">
      <h3 class="text-center my-2">${array[i].name} ${array[i].surname} </h3>
      
      <p class="text-center my-2">${array[i].role}</p>

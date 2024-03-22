@@ -50,7 +50,6 @@ label{
 }
 
 .box{
-    width: calc(100% / 3 - 30px);
     padding: 10px;
     margin-top: 20px;
 
