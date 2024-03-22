@@ -53,8 +53,8 @@ send.addEventListener('click', function () {
     ulEl.innerHTML = '';
     const newMembers = newObject(newMemb, teaMembers);
 
-makeCard(newMembers)
-console.log(newMembers)
+    makeCard(newMembers)
+    console.log(newMembers)
 
 });
 
@@ -64,25 +64,27 @@ makeCard(teaMembers)
 
 // **************** funzioni ****************//
 function makeCard(array) {
-   
-    for (let i = 0; i < array.length; i++) {
-        
-        const divEl = document.createElement('div');
-        divEl.classList.add('card', 'box', 'text-center', 'col-12', 'col-lg-3');
 
-        divEl.innerHTML = `
+    for (let i = 0; i < array.length; i++) {
+
+        const divEl = document.createElement('div');
+        divEl.classList.add('box', 'text-center', 'col-12','col-md-6', 'col-lg-4',);
+
+        divEl.innerHTML = `<div class="card">
        <img class="img-fluid" src="/img/${array[i].image}" alt="photo ${array[i].name} ${array[i].surname}">
-     <h3 class="text-center my-2">${array[i].name} ${array[i].surname} </h3>
-     
-     <p class="text-center my-2">${array[i].role}</p>
-    
+       <div class="card-body ">
+       <h3 class="text-center my-2">${array[i].name} ${array[i].surname} </h3>
+       <p class="text-center my-2">${array[i].role}</p>
+       <a href="" class="btn btn-outline-warning mb-2">Elimina</a>  
+       </div>  
+       </div>  
     `;
         ulEl.appendChild(divEl)
 
     };
 }
 function newObject(inputs, array) {
-    
+
     const objectNew = {
 
     };
