@@ -49,7 +49,8 @@ let teaMembers = [
 ];//array iniziale con dentro oggetti
 
 //bottone send che carica i dati dal form.
-send.addEventListener('click', function () {
+send.addEventListener('click', (e)=> {
+    e.preventDefault();
     ulEl.innerHTML = '';
     const newMembers = newObject(newMemb, teaMembers);
 
@@ -66,7 +67,7 @@ makeCard(teaMembers)
 function makeCard(array) {
 
     for (let i = 0; i < array.length; i++) {
-
+        
         const divEl = document.createElement('div');
         divEl.classList.add('box', 'text-center', 'col-12','col-md-6', 'col-lg-4',);
 
@@ -75,7 +76,7 @@ function makeCard(array) {
        <div class="card-body ">
        <h3 class="text-center my-2">${array[i].name} ${array[i].surname} </h3>
        <p class="text-center my-2">${array[i].role}</p>
-       <a href="" class="btn btn-outline-warning mb-2">Elimina</a>  
+       <a href="#" class="btn btn-outline-warning mb-2">Elimina</a>  
        </div>  
        </div>  
     `;
